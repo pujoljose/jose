@@ -49,7 +49,10 @@ if suma_lista<21:
 	print(suma_lista)	
 else:
 	print("vuelva a intentar")
-
+    # Inovetip: Es muy importante el indentado! fijate cuando pegues 
+    # que no quede mal.
+    # En cuanto al ejercicio, está perfecto, solo lo pondría en un bucle
+    # while mientras que la suma sea menor o igual a 21. 
 
 def ej2():
     print('Comenzamos a ponernos serios!')
@@ -166,7 +169,10 @@ while len(repartidor_carta) != 2:
 while len(repartidor_carta) != 2:
 	repartidor_carta.append(random.randint(1, 10))
 	if len(repartidor_carta) == 2:
-		print("tenes", jugador_carta)		
+		print("tenes", jugador_carta)
+	# Inovetip: acá nunca entra porque 
+        # tenes que usar jugador_carta en vez de 
+        # repartidor_carta en todas las variables del while!
 
 if sum(repartidor_carta) == 21:
 	print("repartidor_carta tiene 21 y gano")
@@ -175,12 +181,14 @@ elif sum(repartidor_carta) > 21:
 
 while sum(jugador_carta) < 21:
 	decision_jugador = str(input("se queda o sale? "))
+	# Inovetip: Indicale al jugador que tiene que responder :D
 	if decision_jugador == "sale":
 		jugador_carta.append(random.randint(1, 10))
 		print("no llegas al total" + str(sum(jugador_carta)) + "de estas cartas", jugador_carta)
 	else:
 		print("el repartidor tiene un total" + str(sum(repartidor_carta)) + "de", repartidor_carta)	
 		print("no llegas al total" + str(sum(jugador_carta)) + "de", jugador_carta)
+                # Inovetip: y si quiero mas cartas?
 		if sum(repartidor_carta) > sum(jugador_carta):
 			print("el repartidor gano")
 		else: 
